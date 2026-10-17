@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 270px; margin: 0; padding: 14px; font: 13px/1.5 system-ui, sans-serif; color: #1b2230; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e6e9ef; background: #1a2029; } select { color-scheme: dark; } }
+  h1 { font-size: 14px; margin: 0 0 4px; }
+  .sub { margin: 0 0 12px; opacity: 0.7; font-size: 12px; }
+  label { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .field { display: grid; gap: 4px; margin-bottom: 10px; }
+  select { width: 100%; padding: 5px; font: inherit; }
+  p.hint { margin: 10px 0 0; opacity: 0.7; font-size: 12px; }
+</style>
+</head>
+<body>
+  <h1>AI Prompt Translator</h1>
+  <p class="sub">Write in any language. It's detected automatically.</p>
+  <div class="field">
+    <label for="target" style="margin:0">Translate to</label>
+    <select id="target"></select>
+  </div>
+  <label><input type="checkbox" id="appendReply"> <span id="replyText">Add “Reply in English.” at the end</span></label>
+  <p class="hint">Shortcut: Alt+T on any supported chat site. English usually uses the fewest tokens.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
